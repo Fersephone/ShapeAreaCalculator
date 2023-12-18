@@ -1,0 +1,39 @@
+using System;
+
+namespace ShapeArea
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string answer;
+            float result;
+
+            Console.WriteLine("What shape would you like to find the area of? Please enter 'r' for rectangle or any other key for circle:");
+            answer = Console.ReadLine();
+
+            if (answer == "r")
+            {
+                Console.WriteLine("Height:");
+                float height = float.Parse(Console.ReadLine());
+
+                Console.WriteLine("Width:");
+                float width = float.Parse(Console.ReadLine());
+
+                result = height * width;
+            }
+            else
+            {
+                Console.WriteLine("Radius:");
+                float radius = float.Parse(Console.ReadLine());
+
+                
+                result = (float)Math.PI * (radius * radius);
+            }
+
+            
+            Console.WriteLine("Result is: " + result);
+            Console.ReadKey();
+        }
+    }
+}
